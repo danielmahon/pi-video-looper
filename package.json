@@ -1,0 +1,22 @@
+{
+  "name": "pi-video-looper",
+  "version": "0.0.1",
+  "description": "Downloads and loops over a set number of videos.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "dotenv": "^0.5.1",
+    "hbs": "~2.9.0",
+    "johnny-five": "^0.8.47",
+    "morgan": "~1.5.1",
+    "omxdirector": "^0.1.1",
+    "raspi-io": "^3.0.0"
+  },
+  "engines": {
+    "node": "~0.10.35"
+  },
+  "author": "Daniel Mahon <daniel@mahonstudios.com>",
+  "license": "MIT"
+}
