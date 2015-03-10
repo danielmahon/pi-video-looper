@@ -2,7 +2,11 @@ FROM resin/rpi-node:0.10
 
 RUN mkdir -p /usr/src/app
 
-RUN apt-get update && apt-get install -y sudo libi2c-dev git
+RUN apt-get update && apt-get install -y sudo libi2c-dev git dropbear
+
+# Add SSH daemon
+ADD start /start
+RUN chmod a+x /start
 
 # Install forked omxplayer by Adafruit
 #RUN wget https://github.com/adafruit/omxplayer/releases/download/2%2F10%2F2015/omxplayer-dist.tgz

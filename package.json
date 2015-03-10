@@ -2,6 +2,11 @@
   "name": "pi-video-looper",
   "version": "0.0.1",
   "description": "Downloads and loops over a set number of videos.",
+  "private": "true",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/danielmahon/pi-video-looper.git"
+  },
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
