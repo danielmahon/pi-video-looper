@@ -10,6 +10,7 @@
     "aws-sdk": "^2.1.16",
     "dotenv": "^0.5.1",
     "download": "^4.0.1",
+    "download-status": "^2.1.1",
     "hbs": "~2.9.0",
     "johnny-five": "^0.8.47",
     "morgan": "~1.5.1",

@@ -2,6 +2,7 @@ var dotenv = require('dotenv').load();
 
 var omx = require('omxdirector').enableNativeLoop();
 var Download = require('download');
+var progress = require('download-status');
 var AWS = require('aws-sdk');
 var fs = require('fs');
 
@@ -55,6 +56,7 @@ s3.listObjects(params, function(err, data) {
     });
     console.log('Downloading...');
     download.dest(__dirname + '/media/');
+    download.use(progress());
     download.run(function(err, files) {
       if (err) throw err;
       console.log('File(s) downloaded successfully!');
