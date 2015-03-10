@@ -35,6 +35,16 @@ s3.listObjects(params, function(err, data) {
     });
   }
 
+  function play() {
+    // Start playing videos in loop
+    console.log('Playing media in loop');
+    fs.readdir(__dirname + '/media', function(err, files) {
+      if (err) throw err;
+      omx.setVideoDir(__dirname + '/media');
+      omx.play(files, {loop: true, audioOutput: 'hdmi'});
+    });
+  }
+
   if (toDownload.length) {
     // Download local versions if missing
     var download = new Download();
@@ -43,26 +53,17 @@ s3.listObjects(params, function(err, data) {
       console.log('Adding ' + path + ' to download queue');
       download.get(endpoint + path);
     });
-    download.dest(__dirname + '/media/');
-
     console.log('Downloading...');
+    download.dest(__dirname + '/media/');
     download.run(function(err, files) {
-      if (err) {
-        throw err;
-      }
-
+      if (err) throw err;
       console.log('File(s) downloaded successfully!');
+      play();
     });
   } else {
     console.log('All media is synced');
+    play();
   }
 
-  // Start playing videos in loop
-  console.log('Playing media in loop');
-  fs.readdir(__dirname + '/media', function(err, files) {
-    if (err) throw err;
-    omx.setVideoDir(__dirname + '/media');
-    omx.play(files, {loop: true, audioOutput: 'hdmi'});
-  });
 
 });
