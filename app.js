@@ -63,6 +63,7 @@ s3.listObjects(params, function(err, data) {
     });
     console.log('Downloading...');
     download.dest(__dirname + '/media/');
+    console.log(progress);
     download.use(progress());
     download.run(function(err, files) {
       if (err) throw err;
