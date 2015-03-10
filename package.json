@@ -16,11 +16,8 @@
     "dotenv": "^0.5.1",
     "download": "^3.3.0",
     "download-status": "^2.1.1",
-    "hbs": "~2.9.0",
     "johnny-five": "^0.8.47",
-    "morgan": "~1.5.1",
-    "omx-manager": "0.0.3",
-    "omxdirector": "^0.1.1",
+    "omx-manager": "^0.0.3",
     "raspi-io": "^3.0.0",
     "underscore": "^1.8.2"
   },
