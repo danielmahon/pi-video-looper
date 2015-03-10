@@ -1,6 +1,6 @@
 {
   "name": "pi-video-looper",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Downloads and loops over a set number of videos.",
   "private": "true",
   "repository": {
