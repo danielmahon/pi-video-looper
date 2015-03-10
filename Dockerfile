@@ -5,8 +5,8 @@ RUN mkdir -p /usr/src/app
 RUN apt-get update && apt-get install -y sudo libi2c-dev git
 
 # Install forked omxplayer by Adafruit
-RUN wget https://github.com/adafruit/omxplayer/releases/download/2%2F10%2F2015/omxplayer-dist.tgz
-RUN tar xvfz omxplayer-dist.tgz -C /
+#RUN wget https://github.com/adafruit/omxplayer/releases/download/2%2F10%2F2015/omxplayer-dist.tgz
+#RUN tar xvfz omxplayer-dist.tgz -C /
 
 WORKDIR /usr/src/app
 RUN git clone git://git.drogon.net/wiringPi

@@ -1,6 +1,6 @@
 var dotenv = require('dotenv').load();
 
-var omx = require('omxdirector');
+var omx = require('omxdirector').enableNativeLoop();
 var Download = require('download');
 var AWS = require('aws-sdk');
 var fs = require('fs');
