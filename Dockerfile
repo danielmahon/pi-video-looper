@@ -18,4 +18,6 @@ COPY package.json /usr/src/app/
 RUN npm install
 COPY . /usr/src/app
 
+RUN mkdir -p /usr/src/app/media
+
 CMD [ "npm", "start" ]
