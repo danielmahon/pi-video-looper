@@ -10,7 +10,13 @@ RUN apt-get update && apt-get install -y \
   fonts-freefont-ttf \
   dbus \
   libsmbclient\
-  libssh-4
+  libssh-4 \
+  fbset \
+  libpcre3-dev \
+  libpcrecpp0 \
+  libva-dev \
+  libva-x11-1 \
+  libva1
 
 # Install omxplayer
 ADD http://omxplayer.sconde.net/builds/omxplayer_0.3.6~git20150217~5337be8_armhf.deb /tmp/omxplayer_0.3.6~git20150217~5337be8_armhf.deb
