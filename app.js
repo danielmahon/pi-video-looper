@@ -38,9 +38,9 @@ s3.listObjects(params, function(err, data) {
     fs.readdir(__dirname + '/media', function(err, files) {
       if (err) throw err;
       localFiles = files;
-      // omx.enableMultipleNativeLoop();
+      omx.enableMultipleNativeLoop();
       omx.setVideosDirectory(__dirname + '/media');
-      omx.play(localFiles, {'--loop': true, '-b': true, '--no-osd': true, '-p': true, '-o': 'hdmi'});
+      omx.play(localFiles[0], {'--loop': true, '-b': true, '--no-osd': true, '-p': true, '-o': 'hdmi'});
     });
   }
 
