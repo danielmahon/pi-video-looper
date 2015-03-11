@@ -41,11 +41,7 @@ RUN npm install
 COPY . /usr/src/app
 
 # Setup Dropbear SSH
-#Set the root password as root if not set as an ENV variable
-RUN export PASSWD=${PASSWD:=root}
-#Set the root password
-RUN echo "root:$PASSWD" | chpasswd
-#Spawn dropbear
-RUN dropbear -E
+ADD start /start
+RUN chmod a+x /start
 
-CMD [ "npm", "start" ]
+CMD [ "/start" ]
