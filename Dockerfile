@@ -1,6 +1,11 @@
 FROM resin/rpi-node:0.10
 
-RUN apt-get update && apt-get install -y sudo libi2c-dev git omxplayer dropbear
+# Install dependancies
+RUN apt-get update && apt-get install -y sudo libi2c-dev git omxplayer dropbear libpcre3 fonts-freefont-ttf
+
+# Install omxplayer
+ADD http://omxplayer.sconde.net/builds/omxplayer_0.3.6~git20150217~5337be8_armhf.deb /tmp/omxplayer_0.3.6~git20150217~5337be8_armhf.deb
+RUN dpkg -i /tmp/omxplayer_0.3.6~git20150217~5337be8_armhf.deb
 
 # Install forked omxplayer by Adafruit
 #RUN wget https://github.com/adafruit/omxplayer/releases/download/2%2F10%2F2015/omxplayer-dist.tgz
