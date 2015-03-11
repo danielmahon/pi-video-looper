@@ -1,7 +1,7 @@
 FROM resin/rpi-node:0.10
 
 # Install dependancies
-RUN apt-get update && apt-get install -y sudo libi2c-dev git omxplayer dropbear libpcre3 fonts-freefont-ttf
+RUN apt-get update && apt-get install -y sudo libi2c-dev git dropbear libpcre3 fonts-freefont-ttf
 
 # Install omxplayer
 ADD http://omxplayer.sconde.net/builds/omxplayer_0.3.6~git20150217~5337be8_armhf.deb /tmp/omxplayer_0.3.6~git20150217~5337be8_armhf.deb
