@@ -40,7 +40,7 @@ s3.listObjects(params, function(err, data) {
       localFiles = files;
       // omx.enableMultipleNativeLoop();
       omx.setVideosDirectory(__dirname + '/media');
-      omx.play(localFiles, {'--loop': false, '-b': true, '--no-osd': true, '-o': 'hdmi'}, true);
+      omx.play(localFiles, {'--loop': true, '-b': true, '--no-osd': true, '-o': 'hdmi'});
     });
   }
 
