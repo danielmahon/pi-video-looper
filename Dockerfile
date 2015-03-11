@@ -34,6 +34,7 @@ RUN git clone git://git.drogon.net/wiringPi
 WORKDIR wiringPi
 RUN ./build
 WORKDIR /usr/src/app
+RUN rm -rf wiringPi
 
 COPY package.json /usr/src/app/
 RUN npm install
