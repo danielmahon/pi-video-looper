@@ -40,7 +40,6 @@ s3.listObjects(params, function(err, data) {
       localFiles = files;
       // omx.enableMultipleNativeLoop();
       omx.setVideosDirectory(__dirname + '/media');
-      console.log(localFiles);
       omx.play(localFiles, {'--loop': false, '-b': true, '--no-osd': true, '-o': 'hdmi'}, true);
     });
   }
@@ -63,7 +62,6 @@ s3.listObjects(params, function(err, data) {
     });
     console.log('Downloading...');
     download.dest(__dirname + '/media/');
-    console.log(progress);
     download.use(progress());
     download.run(function(err, files) {
       if (err) throw err;

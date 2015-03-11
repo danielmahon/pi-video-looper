@@ -1,8 +1,9 @@
 FROM resin/rpi-node:0.10
 
 RUN mkdir -p /usr/src/app
+RUN mkdir -p /usr/src/app/media
 
-RUN apt-get update && apt-get install -y sudo libi2c-dev git
+RUN apt-get update && apt-get install -y sudo libi2c-dev git omxplayer dropbear
 
 # Install forked omxplayer by Adafruit
 #RUN wget https://github.com/adafruit/omxplayer/releases/download/2%2F10%2F2015/omxplayer-dist.tgz
@@ -17,7 +18,5 @@ WORKDIR /usr/src/app
 COPY package.json /usr/src/app/
 RUN npm install
 COPY . /usr/src/app
-
-RUN mkdir -p /usr/src/app/media
 
 CMD [ "npm", "start" ]
