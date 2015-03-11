@@ -8,6 +8,9 @@ RUN apt-get update && apt-get install -y \
   dropbear \
   libpcre3 \
   fonts-freefont-ttf \
+  dbus \
+  libsmbclient\
+  libssh-4 \
   libraspberrypi0
 
 # Install omxplayer
